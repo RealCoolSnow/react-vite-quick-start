@@ -13,6 +13,9 @@ export default defineConfig({
   },
   build: {
     target: 'es2015',
+    // vite3 use already made esbuild the default minifier for both JS and CSS 
+    // https://vitejs.dev/blog/announcing-vite3.html#bundle-size-reduction
+    /*
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -20,7 +23,7 @@ export default defineConfig({
         // pure_funcs: ['console.log'], // 单独指定
         drop_debugger: true,
       },
-    },
+    },*/
     /* 如需分包时开启 */
     /*
     rollupOptions: {
