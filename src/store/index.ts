@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import logger from 'redux-logger'
 import { commonReducer } from './common'
 import { counterReducer } from './counter'
-import { isDebug } from '../config'
+import { isDebug } from '../constants'
 
 const rootReducer = combineReducers({
   common: commonReducer,
