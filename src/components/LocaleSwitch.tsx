@@ -1,5 +1,6 @@
 import i18n from '@/locale'
 import { Dispatch, RootState } from '@/store'
+import { commonActions } from '@/store/common'
 import { ChangeEvent } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -8,7 +9,7 @@ const LocaleSwitch = () => {
   const language = useSelector((state: RootState) => state.common.language)
   const onLocaleChanged = (e: ChangeEvent<HTMLSelectElement>) => {
     const locale = e.target.value
-    dispatch.common.setLanguage(locale)
+    dispatch(commonActions.setLanguage(locale))
     i18n?.changeLanguage(locale)
   }
   return (
